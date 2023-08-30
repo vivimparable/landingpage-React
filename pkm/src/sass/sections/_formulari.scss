@@ -1,0 +1,132 @@
+.formulario{
+    overflow: hidden;
+}
+%error-message-base {
+    position: absolute;
+    text-align: center;
+    width: 55%;
+    margin-top: 30rem;
+    border-radius: 1rem;
+    animation: errorMessage 5.5s;
+    z-index: 1;
+    padding: 0.7rem 0.1rem;
+}
+
+.errorMessage {
+    @extend %error-message-base;
+    color: rgb(255, 0, 0);
+    background-color: rgba(69, 0, 0, 0.4);
+    border: solid rgb(203, 19, 19) 0.1rem;
+}
+
+.not-errorMessage {
+    @extend %error-message-base;
+    color: rgb(46, 201, 85);
+    background-color: rgba(0, 69, 7, 0.4);
+    border: solid rgb(19, 203, 50) 0.1rem;
+}
+
+
+form{
+    animation: formulario 1.5s;
+    position: relative;
+    background-color: rgb(108, 14, 142,0.4);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 60%;
+    margin: auto;
+    padding: 1rem;
+    input{
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        padding: 0.4rem;
+        height: 1.6rem;
+        border-radius: 0.5rem;
+        border: none;
+        max-width: 90%;
+    }
+    .form-email{
+        font-size: 2rem;
+    }
+    .form-asunto{
+        font-size: 2rem;
+    }
+    .form-area{
+        textarea{
+            width: 90%;
+            margin: auto;
+        }
+       
+        
+    }
+    .form-area textarea{
+        padding: 0.4rem;
+        height: 1.6rem;
+        max-width: auto;
+        height: 20rem;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        border-radius: 1rem;
+        
+        
+    }
+    button{
+        background-color: rgb(177, 3, 142);
+        font-size: 1.4rem;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        transition: 0.5s;
+        display: flex;
+        align-items: center;
+        color: rgb(196, 196, 196);
+        margin: 0.2rem auto;
+         
+        &:hover{
+            background-color: transparent;
+            border:solid 0.1rem rgb(177, 3, 142);
+            color: rgb(177, 3, 142);
+        }
+     }
+
+
+}
+
+ @keyframes errorMessage {
+    0% {
+        transform: translateX(300%);
+    }
+     
+    25% {
+        transform: translateX(75%);
+    }
+    50% {
+        transform: translateX(75%);
+    }
+
+    75% {
+        transform: translateX(75%);
+    }
+    100%{
+        transform: translateX(300%);
+    }
+ }
+
+ @keyframes formulario {
+    0% {
+        transform: translateX(200%);
+    }
+
+    
+    75%{
+        transform: translateX(-10%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+ }
+
+

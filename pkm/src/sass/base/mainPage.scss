@@ -1,0 +1,111 @@
+
+.main-content {
+    display: grid;
+    grid-template-columns: 90% 10%;  
+    align-items: center;  
+    border-top-left-radius: 100%;
+    background-color: rgba(159, 50, 218, 0.1);
+   a{
+    color: white;
+   }
+    &_box1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 4.5rem;
+        color: #d19ff1;
+        margin-left: 2rem;
+        height: calc(100vh - 117px); 
+        width: 90%;
+       p{
+        border-right: .15em solid #8806c4;
+        animation: typing 4s steps(38) 5s 1 normal both, blink 1s steps(1) infinite;
+        overflow: hidden;
+        white-space: nowrap;
+       }
+    }
+    &_box2 {
+        
+        color: wheat;
+        font-size: 3rem;
+        color: rgb(190, 101, 212);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: calc(100vh - 117px);
+        
+        
+        svg{
+            animation: IconsAnimation 3s 3s;
+            transition: 0.2s;
+            &:hover{
+                color: rgb(129, 98, 136);
+                cursor: pointer;
+            }
+        }
+        div{
+            
+            &:nth-child(3){
+                height: calc(5vh);
+            }
+        }
+        
+            
+        .lineDown {
+            border-left: 0.1rem solid rgb(190, 101, 212);
+            height: calc(60vh); /* Ajusta la altura según tus necesidades */
+            animation: lineDown 3s;
+          }
+            
+        
+    }
+}
+
+@keyframes blink{
+    50% {
+        border-color: transparent;
+      }
+}
+
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+@keyframes lineDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes IconsAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg); /* Giro completo */
+    }
+  }
+
+ 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  p{
+    font-size: 4rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

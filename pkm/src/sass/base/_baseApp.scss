@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600&display=swap');
+
+body {
+    position: relative; /* Asegura que la posición relativa se aplique a los elementos posicionados dentro */
+    background-image: url('../../assets/bg-color.jpg');
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: inherit;
+    font-family: 'Raleway';
+    background-color: rgb(95, 6, 95);
+
+    /* Superposición semi-transparente para oscurecer la imagen */
+   backdrop-filter: blur(0.2rem);
+}
